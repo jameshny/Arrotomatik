@@ -26,6 +26,6 @@ urlpatterns = [
     path('auth/', include('rest_framework_social_oauth2.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0)),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0)),
-    path('earthHumidity/', views.EarthHumidityList.as_view()),
-    path('irInformation/<int:pk>/', views.AirInformationList.as_view())
+    path('earthhumidity/', views.EarthHumidityList.as_view()),
+    path('airinformation/', views.AirInformationList.as_view())
 ]

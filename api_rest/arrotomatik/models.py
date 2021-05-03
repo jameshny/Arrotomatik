@@ -14,9 +14,11 @@ class TimeStampMixin(models.Model):
 
 class EarthHumidity(TimeStampMixin):
     user     = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    humidity = models.FloatField()
+    date     = models.DateField(auto_now=True)
+    humidity = models.DecimalField(max_digits=4, decimal_places=2)
 
 class AirInformation(TimeStampMixin):
     user        = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    temperature = models.FloatField()
-    humidity    = models.FloatField()
+    date        = models.DateField(auto_now=True)
+    temperature = models.DecimalField(max_digits=4, decimal_places=2)
+    humidity    = models.DecimalField(max_digits=4, decimal_places=2)
